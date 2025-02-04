@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load the saved model
-model_path = r'C:\Users\adabh\OneDrive\Desktop\AI_projects\student_performance_analysis\model\knn_model.pkl'
+model_path = r'C:\Users\adabh\Documents\student_performance_analysis\model\knn_model.pkl'
 model = joblib.load(model_path)
 
 # Extract feature names from the model if they are available
@@ -13,10 +13,9 @@ try:
     expected_columns = model.feature_names_in_
 except AttributeError:
     st.error("The model does not contain feature names. Please ensure the model is trained with feature names.")
-
 def main():
     # Set the title of the web app
-    st.title('Student Pass/Fail Prediction')
+    st.title('Student Performance Prediction')
 
     # Add a description
     st.write('Enter student information to predict pass or fail.')
